@@ -136,6 +136,11 @@ ul.nested li+li {
     margin-top: 8px;
 }
 
+ul.nested li a {
+    text-decoration: none;
+    color: #2C2C2C;
+}
+
 ul.nested li a:visited {
     text-decoration: none;
     color: #2C2C2C;
