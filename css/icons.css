@@ -1,0 +1,8 @@
+.userIcon {
+    content: url("/assets/user.svg");
+    
+}
+
+.passwordIcon {
+    content: url("/assets/lock.svg");
+}
