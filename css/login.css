@@ -31,7 +31,7 @@ body {
     display: flex;
     flex-direction: row;
     width: 100%;
-    filter: contrast(0);
+    opacity: 0.5;
     transition: .4s;
 }
 
@@ -42,8 +42,10 @@ body {
 }
 
 #loginBox form div.input:focus-within {
-    filter: contrast(1);
+    opacity: 1;
 }
+
+.inputChecked {}
 
 #loginBox form div.input input {
     width: 100%;
@@ -116,4 +118,38 @@ body {
     line-height: 19px;
     color: #000000;
     padding: 0 8px 0 0;
+}
+
+@media only screen and (max-width:415px) {
+    body {
+        background: #FFFFFF;
+    }
+    #loginBox {
+        box-shadow: none;
+    }
+    #loginBox a {
+        align-self: center;
+    }
+    #loginBox form .enterBtn {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-height:480px) {
+    body {
+        background: #FFFFFF;
+        justify-content: flex-start;
+    }
+    #loginBox {
+        box-shadow: none;
+    }
+    #loginBox a {
+        align-self: center;
+    }
+    #loginBox form .enterBtn {
+        width: 100%;
+    }
+    .footerLogin {
+        padding: 40px 0;
+    }
 }

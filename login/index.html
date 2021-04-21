@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/icons.css">
-
 </head>
 
 <body>
@@ -18,7 +17,8 @@
         <form action="/dashboard" method="get" onsubmit="return Validate();">
             <div class="input">
                 <i class="userIcon"></i>
-                <input class="user" type="text" name="username" id="inputUsername" placeholder="Usuário" required />
+                <input oninput="InputActive();" class="user" type="text" name="username" id="inputUsername"
+                    placeholder="Usuário" required />
             </div>
             <div class="input">
                 <i class="passwordIcon"></i>
@@ -28,7 +28,7 @@
             <input class="enterBtn" type="submit" value="Acessar" />
         </form>
 
-        <a href="/recover">
+        <a href="../recover">
             <p>
                 Recuperar Credenciais
             </p>
@@ -47,8 +47,13 @@
             return condition
         }
         function InputActive() {
-            const element = document.getElementById("myDIV");
-            element.classList.toggle("mystyle");
+            const username = document.getElementById("inputUsername");
+            const formUser = document.getElementsByClass("input")
+            const password = document.getElementById("inputPassword");
+            if (username.value.length === 0) {
+                formUser.classList.remove("inputCHecked");
+            }
+            else formUser.classList.add("inputCHecked");
         }
     </script>
 </body>
