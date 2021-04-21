@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/icons.css">
+    <title>Sidebar</title>
+</head>
+
+<body>
+    <div class="sidebarComponent">
+        <button type="menu" class="sidebarToogler"><i class="showSidebarIcon"></i></button>
+        <section id="Sidebar" class="shadowCard">
+            <img class="businessLogo" src="../assets/logo_business.svg" alt="logo da empresa" />
+            <div class="profile separatorLineInBox">
+                <h1>
+                    Administrador
+                </h1>
+                <h2>
+                    Diretor
+                </h2>
+            </div>
+            <nav class="navbars">
+                <ul id="nav1" class="shadowNavBox">
+                    <li><span class="caret caret-down">
+                            <h1>
+                                FINANCEIRO
+                            </h1>
+                        </span>
+                        <ul class="nested active">
+                            <li>
+                                <a class="selected" href="./">DRE</a>
+                            </li>
+                            <li>
+                                <a href="./">
+                                    DRE ANALÍTICO
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul id="nav2" class="shadowNavBox">
+                    <li><span class="caret">
+                            <h1>
+                                OPERACIONAL
+                            </h1>
+                        </span>
+                        <ul class="nested active">
+                            <li>
+                                <a href="./">Visão Geral</a>
+                            </li>
+                            <li>
+                                <a href="./">
+                                    Share operações
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./">
+                                    Desempenho
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul id="nav3" class="shadowNavBox">
+                    <li><span class="caret">
+                            <h1>
+                                VISÃO GERAL
+                            </h1>
+                        </span>
+                    </li>
+                </ul>
+            </nav>
+            <footer class="opts">
+                <a href="./">
+                    <i class="configIcon"></i>
+                    <p>
+                        Configurações
+                    </p>
+                </a>
+                <a href="./">
+                    <i class="helpIcon"></i>
+                    <p>
+                        Ajuda
+                    </p>
+
+                </a>
+            </footer>
+        </section>
+    </div>
+
+
+
+
+    <script>
+        var toggler = document.getElementsByClassName("caret");
+        var i;
+
+        for (i = 0; i < toggler.length; i++) {
+            toggler[i].addEventListener("click", function () {
+                this.parentElement.querySelector(".nested").classList.toggle("active");
+                this.classList.toggle("caret-down");
+            });
+        }
+    </script>
+    <script>
+        var toggler = document.getElementsByClassName("sidebarToogler");
+        var i;
+
+        for (i = 0; i < toggler.length; i++) {
+            toggler[i].addEventListener("click", function () {
+                document.querySelector("#Sidebar").classList.toggle("hidded");
+                this.parentElement.querySelector(".showSidebarIcon").classList.toggle("hidded");
+                this.classList.toggle("hidded");
+            });
+        }
+    </script>
+</body>
+
+</html>

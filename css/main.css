@@ -19,18 +19,7 @@ a {
     text-decoration: none;
 }
 
-input[type=text] {
-    opacity: 1;
-}
-input[type=text]:-moz-placeholder {
-    opacity: 1;
-}
-input[type=text]::-moz-placeholder {
-    opacity: 1;
-}
-input[type=text]:-ms-input-placeholder {
-    opacity: 1;
-}
-input[type=text]::-webkit-input-placeholder {
-    opacity: 1;
+ul,li {
+    display: flex;
+    flex-direction: column;
 }

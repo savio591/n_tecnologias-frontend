@@ -5,6 +5,7 @@ body {
     width: 100%;
     height: 100vh;
     justify-content: space-around;
+    transition: .2s;
 }
 
 #loginBox {
@@ -45,7 +46,6 @@ body {
     opacity: 1;
 }
 
-.inputChecked {}
 
 #loginBox form div.input input {
     width: 100%;
@@ -123,6 +123,7 @@ body {
 @media only screen and (max-width:415px) {
     body {
         background: #FFFFFF;
+        transition: .2s;
     }
     #loginBox {
         box-shadow: none;
@@ -139,6 +140,7 @@ body {
     body {
         background: #FFFFFF;
         justify-content: flex-start;
+        transition: .2s;
     }
     #loginBox {
         box-shadow: none;

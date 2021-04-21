@@ -1,8 +1,24 @@
 .userIcon {
     content: url("../assets/user.svg");
-    
+    line-height: 0;
 }
 
 .passwordIcon {
     content: url("../assets/lock.svg");
+    line-height: 0;
+}
+
+.configIcon {
+    content: url("../assets/config.svg");
+    line-height: 0;
+}
+
+.helpIcon {
+    content: url("../assets/help.svg");
+    line-height: 0;
+}
+
+.showSidebarIcon {
+    content: url("../assets/show_arrow.svg");
+    line-height: 0;
 }
