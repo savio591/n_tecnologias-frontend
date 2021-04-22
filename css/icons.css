@@ -22,3 +22,18 @@
     content: url("../assets/show_arrow.svg");
     line-height: 0;
 }
+
+.logoutIcon {
+    content: url("../assets/logout.svg");
+    line-height: 0;
+}
+
+.burguerIcon {
+    content: url("../assets/burguer.svg");
+    line-height: 0;
+}
+
+.userMenuIcon {
+    content: url("../assets/userMenu.svg");
+    line-height: 0;
+}

@@ -44,22 +44,6 @@ button[type="menu"].hidded i.hidded {
     transition: .2s;
 }
 
-.separatorLineInBox {
-    border-bottom: 1px solid rgba(49, 94, 169, 0.32);
-}
-
-.shadowCard {
-    background: #FFFFFF;
-    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
-}
-
-.shadowNavBox {
-    background: #FFFFFF;
-    box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.25);
-    border-radius: 8px;
-    margin-top: 16px;
-}
-
 div.profile {
     align-self: center;
     width: 170px;
@@ -204,19 +188,4 @@ footer.opts {
     align-items: center;
     padding: 24px 0 32px;
     flex-grow: 1;
-}
-
-footer.opts p {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 16px;
-    text-decoration-line: underline;
-    color: #1A1A1A;
-    padding-left: 4px;
-}
-
-footer.opts a {
-    display: flex;
-    flex-direction: row;
 }
