@@ -3,7 +3,7 @@ div.sidebarComponent {
     flex-direction: row;
 }
 
-button[type="menu"] {
+button[type="button"].sidebarToogler {
     width: 16px;
     height: 40px;
     order: 2;
@@ -20,12 +20,12 @@ button[type="menu"] {
     transition: .2s;
 }
 
-button[type="menu"].hidded {
+button[type="button"].sidebarToogler.hidded {
     transform: translateX(-218px);
     transition: .2s;
 }
 
-button[type="menu"].hidded i.hidded {
+button[type="button"].sidebarToogler.hidded i.hidded {
     transform: rotate(180deg);
     transition: .2s;
 }
@@ -86,9 +86,10 @@ nav.navbars {
     transition: .2s;
     align-items: center;
     height: 32px;
+    position: relative;
 }
 
-.caret h1 {
+span.caret {
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -96,7 +97,10 @@ nav.navbars {
     text-align: center;
     flex-grow: 1;
     color: #3B3D3F;
-    margin-left: 28px;
+    align-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 ul.nested li {
@@ -113,7 +117,6 @@ ul.nested li {
     font-size: 12px;
     line-height: 16px;
     color: #2C2C2C;
-
 }
 
 ul.nested li+li {
@@ -152,8 +155,10 @@ ul.nested li::before {
     padding: 0 12px;
     line-height: 0;
     -ms-transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
+    -webkit-transform: rotate( 180deg);
+    transform: rotate( 180deg);
+    position: absolute;
+    right: 0;
 }
 
 .caret-down::after {
