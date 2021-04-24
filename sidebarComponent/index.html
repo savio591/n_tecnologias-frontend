@@ -25,7 +25,7 @@
                 </h2>
             </div>
             <nav class="navbars">
-                <ul id="nav1" class="shadowNavBox">
+                <!-- <ul id="nav1" class="shadowNavBox">
                     <li><span class="caret caret-down">
                             FINANCEIRO
                         </span>
@@ -67,7 +67,7 @@
                             VISÃO GERAL
                         </span>
                     </li>
-                </ul>
+                </ul> -->
             </nav>
             <footer class="opts">
                 <a href="./" class="linkWithIcon">
@@ -87,17 +87,7 @@
         </section>
     </div>
 
-    <script>
-        var toggler = document.getElementsByClassName("caret");
-        var i;
-
-        for (i = 0; i < toggler.length; i++) {
-            toggler[i].addEventListener("click", function () {
-                this.parentElement.querySelector(".nested").classList.toggle("active");
-                this.classList.toggle("caret-down");
-            });
-        }
-    </script>
+    
     <script>
         var toggler = document.getElementsByClassName("sidebarToogler");
         var i;
@@ -107,6 +97,19 @@
                 document.querySelector("#Sidebar").classList.toggle("hidded");
                 this.parentElement.querySelector(".showSidebarIcon").classList.toggle("hidded");
                 this.classList.toggle("hidded");
+            });
+        }
+    </script>
+    <script src="../js/appendContext.js"></script>
+
+    <script>
+        var toggler = document.getElementsByClassName("caret");
+        var i;
+
+        for (i = 0; i < toggler.length; i++) {
+            toggler[i].addEventListener("click", function () {
+                this.parentElement.querySelector(".nested").classList.toggle("active");
+                this.classList.toggle("caret-down");
             });
         }
     </script>

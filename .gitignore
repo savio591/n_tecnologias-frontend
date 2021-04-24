@@ -1,3 +1,7 @@
+# Savil Attachers
+*.lnk
+*.fig
+
 # Logs
 logs
 *.log

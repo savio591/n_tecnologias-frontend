@@ -1,0 +1,40 @@
+{
+  "user": "Administrador",
+  "type": "Diretor",
+  "navmap": [
+    {
+      "title": "FINANCEIRO",
+      "active": true,
+      "lists": [
+        {
+          "listname": "DRE",
+          "link": "./",
+          "active": true
+        },
+        {
+          "listname": "DRE ANALÍTICO",
+          "link": "./"
+        }
+      ]
+    },
+    {
+      "title": "OPERACIONAL",
+      "active": true,
+      "lists": [
+        {
+          "listname": "Visão Geral",
+          "link": "./"
+        },
+        {
+          "listname": "Share operações",
+          "link": "./"
+        },
+        {
+          "listname": "Desempenho",
+          "link": "./"
+        }
+      ]
+    },
+    { "title": "VISÃO GERAL", "lists": [] }
+  ]
+}
