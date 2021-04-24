@@ -1,0 +1,94 @@
+body {
+    height: 100vh;
+}
+
+div.dashboardList {
+    padding: 32px 16px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #FFFFFF;
+}
+
+div.dashboardList article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 16px;
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+}
+
+div.dashboardList article h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #202020;
+    margin: 24px 0;
+}
+
+div.dashboardList article ul.cards {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    overflow: auto;
+}
+
+div.dashboardList article ul.cards li a {
+    position: relative;
+}
+
+div.dashboardList article ul.cards li a img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+div.dashboardList article ul.cards li a h2 {
+    position: absolute;
+    top: 4px;
+    text-align: center;
+    width: 100%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    color: #3B3D3F;
+}
+
+div.dashboardList article ul.cards .card+.card {
+    margin-top: 16px;
+}
+
+i.boxWhiteGradientUp {
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    width: 100%;
+    height: 55px;
+    position: absolute;
+    top: 0;
+    border-radius: 8px 8px 0px 0px;
+}
+
+i.boxWhiteGradientDown {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.83) 0%, rgba(255, 255, 255, 0) 100%);
+    transform: rotate(-180deg);
+    width: 100%;
+    height: 55px;
+    position: absolute;
+    bottom: 0;
+    border-radius: 0px 0px 8px 8px;
+}
+
+@media only screen and (max-width:720px) {
+    div.dashboardList {
+        flex-wrap: wrap;
+    }
+}
