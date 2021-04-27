@@ -7,6 +7,7 @@ import Sidebar from "../components/sidebar";
 import { ApiProvider } from "../context";
 
 export default function Dashboard() {
+  document.title = "N Tecnologias | Dashboard";
   return (
     <ApiProvider>
       <Sidebar />

@@ -1,9 +1,12 @@
+import React, { useState } from "react";
+import { Link, useHistory, useLocation } from "react-router-dom";
+
+import logoSmall from "../../assets/logo_small.png";
+import logoSquare from "../../assets/logo_square.png";
+
 import "../../styles/main.css";
 import "../../styles/login.css";
 import "../../styles/icons.css";
-
-import React, { useState } from "react";
-import { Link, useHistory, useLocation, useRouteMatch } from "react-router-dom";
 
 interface formDataModel {
   username: string;
@@ -11,8 +14,8 @@ interface formDataModel {
 }
 
 export default function Login() {
+  document.title = "N Tecnologias | Login";
   const hist = useHistory();
-  const loc = useLocation();
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
@@ -22,11 +25,12 @@ export default function Login() {
     event.preventDefault();
     if (condition) hist.push("/dashboard");
   };
+
   return (
     <>
       <div id="LoginPage">
         <article id="loginBox">
-          <img src="../assets/logo_square.png" alt="logo" />
+          <img src={logoSquare} alt="logo" />
           <form onSubmit={Validate}>
             <div className="input">
               <i className="userIcon"></i>
@@ -60,7 +64,7 @@ export default function Login() {
         </article>
         <div className="footerLogin">
           <h2>Powered By</h2>
-          <img src="../assets/logo_small.png" alt="Logo" />
+          <img src={logoSmall} alt="Logo" />
         </div>
       </div>
     </>

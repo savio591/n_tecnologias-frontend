@@ -1,12 +1,14 @@
-import React, { BaseSyntheticEvent, SyntheticEvent, useContext, useEffect, useState } from "react";
-import { Link, useHistory, useLocation } from "react-router-dom";
+import React, { BaseSyntheticEvent, useContext } from "react";
+import { Link } from "react-router-dom";
+
 import { ApiContext } from "../../context";
-import ResponseSchema from "../../models/ResponseSchema";
+
 import "../../styles/sidebar.css";
+import businessLogo from "../../assets/logo_business.svg";
 
 export default function Sidebar() {
   const { user, type, navmap } = useContext(ApiContext);
-  const baseDashboardSect = "/dashboard"
+  const baseDashboardSect = "/dashboard";
 
   const buttonToogler = (data: BaseSyntheticEvent) => {
     const btn = data.target;
@@ -19,10 +21,10 @@ export default function Sidebar() {
   };
 
   const listToogler = (data: BaseSyntheticEvent) => {
-      const list = data.target
-        list.parentElement.querySelector(".nested").classList.toggle("active");
-        list.classList.toggle("caret-down");
-      }
+    const list = data.target;
+    list.parentElement.querySelector(".nested").classList.toggle("active");
+    list.classList.toggle("caret-down");
+  };
 
   return (
     <>
@@ -37,7 +39,7 @@ export default function Sidebar() {
         <section id="Sidebar" className="shadowCard">
           <img
             className="businessLogo"
-            src="../assets/logo_business.svg"
+            src={businessLogo}
             alt="logo da empresa"
           />
           <div className="profile separatorLineInBox">
@@ -49,7 +51,10 @@ export default function Sidebar() {
               return (
                 <ul id="nav1" className="shadowNavBox">
                   <li>
-                    <span onClick={listToogler} className={"caret " + (l.active ? "caret-down" : "")}>
+                    <span
+                      onClick={listToogler}
+                      className={"caret " + (l.active ? "caret-down" : "")}
+                    >
                       {l.title}
                     </span>
                     <ul className={"nested " + (l.active ? "active" : "")}>
@@ -58,7 +63,7 @@ export default function Sidebar() {
                           <li>
                             <Link
                               className={li.active ? "selected" : ""}
-                              to={baseDashboardSect+li.link}
+                              to={baseDashboardSect + li.link}
                             >
                               {li.listname}
                             </Link>
@@ -70,7 +75,6 @@ export default function Sidebar() {
                 </ul>
               );
             })}
-
           </nav>
           <footer className="opts">
             <a href="./" className="linkWithIcon">

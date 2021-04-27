@@ -9,10 +9,10 @@ module.exports = {
   entry: path.resolve(__dirname, 'src', 'index'),
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx']
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.svg', '.png']
   },
 
 
@@ -39,7 +39,7 @@ module.exports = {
       {
         test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
-        use: { 
+        use: {
           loader: 'babel-loader',
           options: {
             plugins: [
@@ -54,7 +54,22 @@ module.exports = {
         use: ['style-loader', 'css-loader']
       },
       {
+        test: /\.(png|jpg|gif)$/i,
+        exclude: /node_modules/,
+        dependency: { not: ['url'] },
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            },
+          },
+        ],
+        type: 'javascript/auto'
+      },
+      {
         test: /\.svg$/,
+        exclude: /node_modules/,
         use: [
           {
             loader: 'svg-url-loader',

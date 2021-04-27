@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { ApiContext } from "../../context";
 
 interface paramModel {
@@ -10,7 +10,7 @@ export default function DashboardDetail() {
   const { id }: paramModel = useParams();
   const { dashboards } = useContext(ApiContext);
   const dashboard = dashboards.find((f) => f.id === id);
-  console.log({id, dashboards, dashboard, params: useParams()})
+  document.title = "N Tecnologias | Dashboard"
   return (
     <>
       <div className="dashboardDetails">

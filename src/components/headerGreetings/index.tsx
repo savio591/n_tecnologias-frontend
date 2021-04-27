@@ -1,10 +1,9 @@
 import { useContext } from "react";
 import { ApiContext } from "../../context";
-import ResponseSchema from "../../models/ResponseSchema";
 import "../../styles/headerGreetings.css";
 
 export default function Header() {
-  const { user } = useContext<ResponseSchema>(ApiContext);
+  const { user } = useContext(ApiContext);
 
   return (
     <>
