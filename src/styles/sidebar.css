@@ -1,6 +1,7 @@
 div.sidebarComponent {
     display: flex;
     flex-direction: row;
+    position: relative;
 }
 
 button[type="button"].sidebarToogler {
@@ -18,10 +19,14 @@ button[type="button"].sidebarToogler {
     align-items: center;
     justify-content: center;
     transition: .2s;
+    position: absolute;
+    right: -16px;
+    z-index: 2;
 }
 
 button[type="button"].sidebarToogler.hidded {
-    transform: translateX(-218px);
+    transform: translateX(0px);
+    
     transition: .2s;
 }
 
@@ -37,11 +42,16 @@ button[type="button"].sidebarToogler.hidded i.hidded {
     height: 100vh;
     padding: 28px 24px 0;
     transition: .2s;
+    opacity: 1;
+    z-index: 1;
 }
 
 #Sidebar.hidded {
     transform: translateX(-224px);
     transition: .2s;
+    width: 0;
+    padding: 0;
+    opacity: 0;
 }
 
 div.profile {
@@ -193,4 +203,10 @@ footer.opts {
     align-items: center;
     padding: 24px 0 32px;
     flex-grow: 1;
+}
+
+@media only screen and (max-width:720px) {
+    #Sidebar {
+        height: inherit;
+    }
 }

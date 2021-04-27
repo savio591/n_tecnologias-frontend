@@ -1,5 +1,5 @@
 import { render } from "react-dom";
 
-import Login from "./pages/login";
+import Routes from "./routes";
 
-render(<Login />, document.getElementById("App"));
+render(<Routes />, document.getElementById("App"));
