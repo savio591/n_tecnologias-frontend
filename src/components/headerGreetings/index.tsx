@@ -1,13 +1,18 @@
-import '../../styles/headerGreetings.css'
+import { useContext } from "react";
+import { ApiContext } from "../../context";
+import ResponseSchema from "../../models/ResponseSchema";
+import "../../styles/headerGreetings.css";
 
 export default function Header() {
+  const { user } = useContext<ResponseSchema>(ApiContext);
+
   return (
     <>
       <header className="greetings shadowCard">
         <h1>
           Bem-vindo(a),&nbsp;
-          <span className="userText" style={{fontStyle: "italic"}}>
-            Administrador
+          <span className="userText" style={{ fontStyle: "italic" }}>
+            {user}
           </span>
         </h1>
         <a href="../" className="logout linkWithIcon">

@@ -1,5 +1,6 @@
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
+import DashboardDetails from "./pages/DashboardDetails";
 
 import Login from "./pages/login";
 
@@ -15,9 +16,10 @@ const Routes = () => {
   return (
     <BrowserRouter forceRefresh={false} basename={basepath()}>
       <Switch>
-      <Route path="/" exact component={Login} />
+        <Route path="/" exact component={Login} />
         <Route path="/login" exact component={Login} />
-        <Route path="/dashboard" component={Dashboard} />
+        <Route path="/dashboard" exact component={Dashboard} />
+        <Route path="/dashboard/:id" component={DashboardDetails} />
       </Switch>
     </BrowserRouter>
   );

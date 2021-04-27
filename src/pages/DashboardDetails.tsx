@@ -1,18 +1,18 @@
 import "../styles/dashboard.css";
 
-import DashboardList from "../components/dashboardList";
+import DashboardDetail from "../components/dashboardDetail";
 import React from "react";
-import Header from "../components/headerGreetings";
 import Sidebar from "../components/sidebar";
 import { ApiProvider } from "../context";
+import Breadcrumb from "../components/breadcrumb";
 
-export default function Dashboard() {
+export default function DashboardDetails() {
   return (
     <ApiProvider>
       <Sidebar />
       <div id="DashboardListContainer">
-        <Header />
-        <DashboardList />
+        <Breadcrumb />
+        <DashboardDetail />
       </div>
     </ApiProvider>
   );

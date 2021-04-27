@@ -1,7 +1,13 @@
-import { BaseSyntheticEvent } from "react";
+import React, { BaseSyntheticEvent, SyntheticEvent, useContext, useEffect, useState } from "react";
+import { Link, useHistory, useLocation } from "react-router-dom";
+import { ApiContext } from "../../context";
+import ResponseSchema from "../../models/ResponseSchema";
 import "../../styles/sidebar.css";
 
 export default function Sidebar() {
+  const { user, type, navmap } = useContext(ApiContext);
+  const baseDashboardSect = "/dashboard"
+
   const buttonToogler = (data: BaseSyntheticEvent) => {
     const btn = data.target;
     document.querySelector(".sidebarToogler").classList.toggle("hidded");
@@ -12,10 +18,11 @@ export default function Sidebar() {
       .classList.toggle("hidded");
   };
 
-  const listToogler = (data) => {
-    this.parentElement.querySelector(".nested").classList.toggle("active");
-    this.classList.toggle("caret-down");
-  };
+  const listToogler = (data: BaseSyntheticEvent) => {
+      const list = data.target
+        list.parentElement.querySelector(".nested").classList.toggle("active");
+        list.classList.toggle("caret-down");
+      }
 
   return (
     <>
@@ -34,53 +41,36 @@ export default function Sidebar() {
             alt="logo da empresa"
           />
           <div className="profile separatorLineInBox">
-            <h1>Administrador</h1>
-            <h2>Diretor</h2>
+            <h1>{user}</h1>
+            <h2>{type}</h2>
           </div>
           <nav className="navbars">
-            {/* <!-- <ul id="nav1" className="shadowNavBox">
-                    <li><span className="caret caret-down">
-                            FINANCEIRO
-                        </span>
-                        <ul className="nested active">
-                            <li>
-                                <a className="selected" href="./">DRE</a>
-                            </li>
-                            <li>
-                                <a href="./">
-                                    DRE ANALÍTICO
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
+            {navmap.map((l) => {
+              return (
+                <ul id="nav1" className="shadowNavBox">
+                  <li>
+                    <span onClick={listToogler} className={"caret " + (l.active ? "caret-down" : "")}>
+                      {l.title}
+                    </span>
+                    <ul className={"nested " + (l.active ? "active" : "")}>
+                      {l.lists.map((li) => {
+                        return (
+                          <li>
+                            <Link
+                              className={li.active ? "selected" : ""}
+                              to={baseDashboardSect+li.link}
+                            >
+                              {li.listname}
+                            </Link>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </li>
                 </ul>
-                <ul id="nav2" className="shadowNavBox">
-                    <li><span className="caret">
-                            OPERACIONAL
-                        </span>
-                        <ul className="nested active">
-                            <li>
-                                <a href="./">Visão Geral</a>
-                            </li>
-                            <li>
-                                <a href="./">
-                                    Share operações
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./">
-                                    Desempenho
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul id="nav3" className="shadowNavBox">
-                    <li><span className="caret">
-                            VISÃO GERAL
-                        </span>
-                    </li>
-                </ul> --> */}
+              );
+            })}
+
           </nav>
           <footer className="opts">
             <a href="./" className="linkWithIcon">

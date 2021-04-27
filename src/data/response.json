@@ -8,8 +8,7 @@
       "lists": [
         {
           "listname": "DRE",
-          "link": "./",
-          "active": true
+          "link": "./"
         },
         {
           "listname": "DRE ANALÍTICO",

@@ -1,0 +1,100 @@
+{
+  "user": "Administrador",
+  "type": "Diretor",
+  "navmap": [
+    {
+      "title": "FINANCEIRO",
+      "active": true,
+      "lists": [
+        {
+          "listname": "DRE",
+          "link": "/11"
+        },
+        {
+          "listname": "DRE ANALÍTICO",
+          "link": "/12"
+        }
+      ]
+    },
+    {
+      "title": "OPERACIONAL",
+      "active": true,
+      "lists": [
+        {
+          "listname": "Visão Geral",
+          "link": "/21"
+        },
+        {
+          "listname": "Share operações",
+          "link": "/22"
+        },
+        {
+          "listname": "Desempenho",
+          "link": "/23"
+        }
+      ]
+    },
+    {
+      "title": "VISÃO GERAL",
+      "lists": [
+        {
+          "listname": "Visão Geral",
+          "link": "/31"
+        }
+      ]
+    }
+  ],
+  "dashboards": [
+    {
+      "id": "11",
+      "link": "https://app.powerbi.com/view?r=eyJrIjoiOTI3YmNhN2ItN2EyZi00ZDFhLThjMjctMjA3OTdkMGE0NDU5IiwidCI6Ijk2ODdhMDBiLTE4YzMtNDBhYi04MjI5LTBkOTJkZDJkMDEzMSJ9&pageName=ReportSection59d487a32c08e310182e"
+    },
+    {
+      "id": "12",
+      "link": "https://app.powerbi.com/view?r=eyJrIjoiOTI3YmNhN2ItN2EyZi00ZDFhLThjMjctMjA3OTdkMGE0NDU5IiwidCI6Ijk2ODdhMDBiLTE4YzMtNDBhYi04MjI5LTBkOTJkZDJkMDEzMSJ9&pageName=ReportSection59d487a32c08e310182e"
+    },
+    {
+      "id": "21",
+      "link": "https://app.powerbi.com/view?r=eyJrIjoiYWNiZGIzNzktNDVlZS00MTA1LWE5MTctZWYyNjVhNDJkNGRlIiwidCI6Ijk2ODdhMDBiLTE4YzMtNDBhYi04MjI5LTBkOTJkZDJkMDEzMSJ9&pageName=ReportSection1e0d85df1abc20ffe27a"
+    },
+    {
+      "id": "22",
+      "link": "https://app.powerbi.com/view?r=eyJrIjoiYWNiZGIzNzktNDVlZS00MTA1LWE5MTctZWYyNjVhNDJkNGRlIiwidCI6Ijk2ODdhMDBiLTE4YzMtNDBhYi04MjI5LTBkOTJkZDJkMDEzMSJ9&pageName=ReportSection1e0d85df1abc20ffe27a"
+    },
+    {
+      "id": "23",
+      "link": "https://app.powerbi.com/view?r=eyJrIjoiYWNiZGIzNzktNDVlZS00MTA1LWE5MTctZWYyNjVhNDJkNGRlIiwidCI6Ijk2ODdhMDBiLTE4YzMtNDBhYi04MjI5LTBkOTJkZDJkMDEzMSJ9&pageName=ReportSection1e0d85df1abc20ffe27a"
+    },
+    {
+      "id": "31",
+      "link": "https://app.powerbi.com/view?r=eyJrIjoiMTllOTVmOTgtYzY4NC00NTgzLTkyMzItNTY1NDJiMGEyMjg4IiwidCI6Ijk2ODdhMDBiLTE4YzMtNDBhYi04MjI5LTBkOTJkZDJkMDEzMSJ9&pageName=ReportSection1263d2e4d21dd1eaeaa9"
+    }
+  ],
+  "navigation": ["FINANCEIRO", "DRE"],
+  "dashboardList": {
+    "recents": [
+      {
+        "title": "DRE FINANCEIRO",
+        "link": "/11",
+        "image": "/assets/dre_min.png"
+      },
+      {
+        "title": "OPERACIONAL",
+        "link": "/21",
+        "image": "/assets/visãoGeral_min.png"
+      },
+      {
+        "title": "VISÃO EXPRESSA",
+        "link": "/31",
+        "image": "/assets/visaoExpressa_min 1.jpg"
+      }
+    ],
+    "starred": [
+      {
+        "title": "DRE FINANCEIRO",
+        "link": "/11",
+        "image": "/assets/dre_min.png"
+      }
+    ]
+  }
+}
